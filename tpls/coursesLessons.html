@@ -1,0 +1,49 @@
+<div class="panel panel-default">
+	<div class="panel-heading">课程基本信息</div>
+	<div class="panel-body">
+		<div class="media">
+			<div class="media-left">
+				<a href="javascript:void(0)">
+			<img class="media-object" src="{{cs_cover}}" alt="">
+		</a>
+			</div>
+			<div class="media-body">
+				<div class="content">
+					<p>课程名称： {{cs_name}}</p>
+					<p>讲师名称： {{tc_name}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">课时信息</div>
+	<div class="panel-body">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>编号</th>
+					<th>名称</th>
+					<th>时长</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{each lessons}}
+				<tr>
+					<td>{{$index+1}}</td>
+					<td>{{$value.ct_name}}</td>
+					<td>{{$value.ct_video_duration}}</td>
+					<td>
+						<button class="btn btn-primary btn-edit-lesson" role="button" ct_id='{{$value.ct_id}}'>编辑</button>
+					</td>
+				</tr>
+				{{/each}}
+			</tbody>
+		</table>
+		<div class="col-md-offset-9 col-md-3 lessons-add">
+			<button class="btn btn-primary btn-add-lesson" role="button">增加课时</button>
+		</div>
+	</div>
+</div>

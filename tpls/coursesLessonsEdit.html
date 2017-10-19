@@ -1,0 +1,71 @@
+<div class="modal fade coursesLessonsEdit" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">编辑课时</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label class="col-sm-2 control-label">课时名称</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" name="ct_name" placeholder="请输入课时名称" value="{{ct_name}}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">课时介绍</label>
+						<div class="col-sm-10">
+							<textarea rows="3" class="form-control" name="ct_brief" placeholder="请输入课时介绍">{{ct_brief}}</textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2">是否免费</label>
+						{{if cg_is_hide==0}}
+						<div class="col-sm-10">
+							<label><input type="radio" name="ct_is_free" value="1" checked='checked'>是</label>
+							<label><input type="radio" name="ct_is_free" value="0">否</label>
+						</div>
+						{{else}}
+						<div class="col-sm-10">
+							<label><input type="radio" name="ct_is_free" value="1">是</label>
+							<label><input type="radio" name="ct_is_free" value="0"  checked='checked'>否</label>
+						</div>
+						{{/if}}
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">视频地址</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" name="ct_video" placeholder="请输入视频地址" value="{{ct_video}}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">视频分钟</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" name="ct_minutes" placeholder="请输入视频分钟" value="{{ct_minutes}}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">视频秒钟</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" name="ct_seconds" placeholder="请输入视频秒钟" value="{{ct_seconds}}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">推荐学习时长</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" name="ct_recommend_duration" placeholder="请输入推荐学习时长" value="{{ct_recommend_duration}}">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-10 col-sm-2 coursesLessonsEditSubmit">
+							<input type="hidden" name="ct_id" value='{{ct_id}}'>
+							<input type="hidden" name="ct_cs_id" value='{{ct_cs_id}}'>
+							<button type="submit" class="btn btn-success">提交</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
