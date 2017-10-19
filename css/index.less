@@ -1,0 +1,116 @@
+html,
+body {
+    height: 100%;
+}
+
+.breadcrumb {
+    margin: 0;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+}
+
+aside {
+    width: 220px;
+    height: 100%;
+    background-color: lightblue;
+    position: fixed;
+    left: 0;
+    top: 0;
+    .profile {
+        width: 100%;
+        height: 200px;
+        text-align: center;
+        padding: 40px;
+    }
+}
+
+main {
+    height: 100%;
+    position: absolute;
+    left: 220px;
+    right: 0;
+    top: 0;
+    .top .right {
+        line-height: 34px;
+        a+a {
+            margin-left: 10px;
+        }
+    }
+    .menu-content {
+        .add-teachers-div {
+            margin-bottom: 15px;
+            .buttons {
+                width: 200px;
+            }
+        }
+        table {
+            th,
+            td {
+                text-align: center;
+            }
+            .table-btns {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.courses-manage {
+    .media {
+        height: 170px;
+        padding: 15px;
+        .media-left {
+            padding-right: 20px;
+            img {
+                width: 240px;
+                height: 140px;
+            }
+        }
+        .media-body {
+            h3,
+            .buttons {
+                margin-top: 10px;
+            }
+            .content {
+                margin-top: 15px;
+                font-size: 18px;
+            }
+        }
+    }
+    .lessons-add {
+        text-align: center;
+    }
+    .courses-basic-select {
+        select {
+            width: 49%;
+        }
+        select+select {
+            margin-left: 2%;
+        }
+    }
+}
+
+.teacher-avatar-uploader{
+    .img-box{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        img{
+            width: 100px;
+            min-height: 120px;
+        }
+    }
+    form{
+        padding: 20px;
+    }
+}
+
+#teachers-chart{
+    width: 1100px;
+    height: 460px;
+}

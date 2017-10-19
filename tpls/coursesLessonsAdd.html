@@ -1,0 +1,62 @@
+<div class="modal fade coursesLessonsAdd" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">增加课时</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label class="col-sm-2 control-label">课时名称</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" name="ct_name" placeholder="请输入课时名称">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">课时介绍</label>
+						<div class="col-sm-10">
+							<textarea rows="3" class="form-control" name="ct_brief" placeholder="请输入课时介绍"></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2">是否免费</label>
+						<div class="col-sm-10">
+							<label><input type="radio" name="ct_is_free" value="1" checked='checked'>是</label>
+							<label><input type="radio" name="ct_is_free" value="0">否</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">视频地址</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" name="ct_video" placeholder="请输入视频地址">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">视频分钟</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" name="ct_minutes" placeholder="请输入视频分钟">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">视频秒钟</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" name="ct_seconds" placeholder="请输入视频秒钟">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">推荐学习时长</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" name="ct_recommend_duration" placeholder="请输入推荐学习时长">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-10 col-sm-2 coursesLessonsAddSubmit">
+							<button type="submit" class="btn btn-success">提交</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

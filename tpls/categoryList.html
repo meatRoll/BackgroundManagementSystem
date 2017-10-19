@@ -1,0 +1,45 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<ol class="breadcrumb">
+			<li><a href="javascript:void(0)">课程管理</a></li>
+			<li class="active">课程列表</li>
+		</ol>
+	</div>
+	<div class="panel-body">
+		<div class="row add-teachers-div">
+			<div class="col-md-offset-9 col-md-3">
+				<button type="button" class="btn btn-success btn-add">添加分类</button>
+				<button type="button" class="btn btn-danger btn-clear">清空分类</button>
+			</div>
+		</div>
+		<table class="table table-bordered table-hover">
+			<thead>
+				<tr>
+					<th>分类名称</th>
+					<th>课程数量</th>
+					<th>是否显示</th>
+					<th>排序</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{each result}}
+				{{if $value.cg_pid==0}}
+				<tr class="info">
+					<td>🐶{{$value.cg_name}}🐶</td>
+				{{else}}
+				<tr>
+					<td>💩💩{{$value.cg_name}}💩💩</td>
+				{{/if}}
+					<td>{{$value.total}}</td>
+					<td>{{$value.cg_is_hide==0?'显示':'隐藏'}}</td>
+					<td>{{$value.cg_order}}</td>
+					<td>
+						<button type="button" class="btn btn-primary btn-edit" cg_id='{{$value.cg_id}}'>编辑</button>
+					</td>
+				</tr>
+				{{/each}}
+			</tbody>
+		</table>
+	</div>
+</div>

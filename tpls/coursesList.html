@@ -1,0 +1,33 @@
+<div class="panel panel-default courses-manage">
+	<div class="panel-heading">
+		<ol class="breadcrumb">
+			<li><a href="javascript:void(0)">课程管理</a></li>
+			<li class="active">课程列表</li>
+		</ol>
+	</div>
+	<div class="panel-body content">
+		<div class="col-md-offset-10 col-md-2 add-course">
+			<button type="button" class="btn btn-success btn-create">创建课程</button>
+		</div>
+		{{each result}}
+		<div class="media">
+			<div class="media-left">
+				<a href='javascript:void(0)' class="courses-pic">
+					<img class="media-object" src="{{$value.cs_cover}}" alt="">
+				</a>
+			</div>
+			<div class="media-body">
+				<div class="buttons pull-right" cs_id='{{$value.cs_id}}'>
+					<button type="button" class="btn btn-success btn-edit-chapter">编辑课时</button>
+					<button type="button" class="btn btn-primary btn-edit-basic">编辑基本信息</button>
+				</div>
+				<h3 class="media-heading">{{$value.cs_name}}</h3>
+				<div class="content">
+					<p>😎😎😎 讲师： {{$value.tc_name}}</p>
+					<p>😏😏😏 分类： {{$value.cg_name}}</p>
+				</div>
+			</div>
+		</div>
+		{{/each}}
+	</div>
+</div>

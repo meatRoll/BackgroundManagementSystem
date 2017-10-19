@@ -1,0 +1,60 @@
+<div class="modal fade teachersEdit" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">编辑讲师</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label class="col-sm-2 control-label">姓名</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" name="tc_name" placeholder="请输入姓名" value="{{tc_name}}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2">性别</label>
+						{{if tc_gender==0}}
+						<div class="col-sm-10">
+							<label><input type="radio" name="tc_gender" value="0" checked='checked'>男</label>
+							<label><input type="radio" name="tc_gender" value="1">女</label>
+						</div>
+						{{else}}
+						<div class="col-sm-10">
+							<label><input type="radio" name="tc_gender" value="0">男</label>
+							<label><input type="radio" name="tc_gender" value="1"  checked='checked'>女</label>
+						</div>
+						{{/if}}
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">入职日期</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control add-datetime" name="tc_join_date" placeholder="请输入入职日期" value="{{tc_join_date}}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">类型</label>
+						<div class="col-sm-10">
+							<select class="form-control" name="tc_type">
+								{{if tc_type==0}}
+								<option value="0" selected='selected'>管理员</option>
+								<option value="1">普通</option>
+								{{else}}
+								<option value="0">管理员</option>
+								<option value="1" selected='selected'>普通</option>
+								{{/if}}
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-10 col-sm-2 teachersEditSubmit">
+							<input type="hidden" name="tc_id" value="{{tc_id}}">
+							<button type="submit" class="btn btn-success">提交</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
