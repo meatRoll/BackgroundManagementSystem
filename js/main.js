@@ -3,7 +3,6 @@ require.config({
 	paths: {
 		jquery: './lib/jquery-3.2.1.min',
 		bootstrap: '../assets/bootstrap-3.3.7-dist/js/bootstrap.min',
-		template: '../tpls',
 		text: './lib/text',
 		tpls: '../tpls',
 		template: './lib/template-web',
